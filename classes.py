@@ -44,44 +44,45 @@ class Pessoa:
         print("Sua vida é 10, a cada erro você perde 2 pontos")
         print(f"Os personagens do jogo são: Temóteo, Lindomar, Celso, Luca, Clebinho e Léo")
         print("-=" * 30)
-        inicio = int(input("Digite 1 para iniciar: "))
-        if inicio == 1:
-            print(f"A primeira dica é: {self.dica1}")
-            tentativa1 = input("Digite sua tentativa: ")
-            if tentativa1 == self.nome:
-                print("Parabéns, você acertou!!")
-            else:
-                vida = vida - 2
-                print(f"Sua vida é: {vida}")
-                print(f"A segunda dica é {self.dica2}")
-                tentativa2 = input("Digite sua tentativa: ")
-                if tentativa2 == self.nome:
+        while True:
+            inicio = int(input("Digite 1 para iniciar: "))
+            if inicio == 1:
+                print(f"A primeira dica é: {self.dica1}")
+                tentativa1 = input("Digite sua tentativa: ")
+                if tentativa1 == self.nome:
                     print("Parabéns, você acertou!!")
                 else:
                     vida = vida - 2
                     print(f"Sua vida é: {vida}")
-                    print(f"A terceira dica é {self.dica3}")
-                    tentativa3 = input("Digite sua tentativa: ")
-                    if tentativa3 == self.nome:
+                    print(f"A segunda dica é {self.dica2}")
+                    tentativa2 = input("Digite sua tentativa: ")
+                    if tentativa2 == self.nome:
                         print("Parabéns, você acertou!!")
                     else:
                         vida = vida - 2
                         print(f"Sua vida é: {vida}")
-                        print(f"A quarta dica é {self.dica4}")
-                        tentativa4 = input("Digite sua tentativa: ")
-                        if tentativa4 == self.nome:
+                        print(f"A terceira dica é {self.dica3}")
+                        tentativa3 = input("Digite sua tentativa: ")
+                        if tentativa3 == self.nome:
                             print("Parabéns, você acertou!!")
                         else:
                             vida = vida - 2
                             print(f"Sua vida é: {vida}")
-                            print(f"A quarta dica é {self.dica5}")
-                            tentativa5 = input("Digite sua tentativa: ")
-                            if tentativa5 == self.nome:
+                            print(f"A quarta dica é {self.dica4}")
+                            tentativa4 = input("Digite sua tentativa: ")
+                            if tentativa4 == self.nome:
                                 print("Parabéns, você acertou!!")
                             else:
-                                print(f"Infelizmente você perdeu todas as vidas, o personagem era: {self.nome}")
-        else:
-            print("Digite 1 para iniciar")
+                                vida = vida - 2
+                                print(f"Sua vida é: {vida}")
+                                print(f"A quarta dica é {self.dica5}")
+                                tentativa5 = input("Digite sua tentativa: ")
+                                if tentativa5 == self.nome:
+                                    print("Parabéns, você acertou!!")
+                                else:
+                                    print(f"Infelizmente você perdeu todas as vidas, o personagem era: {self.nome}")
+            else:
+                print(" ")
 
 
 
