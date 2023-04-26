@@ -1,19 +1,14 @@
-import random
+from random import choice
 from classes import Pessoa
 
+timoteo = Pessoa('Temóteo', 'SENAI', '2 filhos', 'É de Hortolandia', 'Paternal', 'Odeia Python')
+lindomar = Pessoa('Lindomar', 'SENAI', 'Arrumou outro emprego recentemente', 'Quer ir para Paulinia', 'Explica mesmo sem saber', 'Beautifulsea')
+celso = Pessoa('Celso', 'SENAI', 'Mestre dos hardwares', 'Tem cara de bravo', 'Apoia os projetos doidos', 'É mecanico')
+luca = Pessoa('Luca', 'BOSCH', 'Atibaia (entendedores entenderão)', 'Alto', 'Magro', 'Gosta de carros')
+clebinho = Pessoa('Clebinho', 'BOSCH', 'Todo mundo gosta', 'Teams tem cara de criança', 'Ensina bem todas as coisas', 'Pediu pra fazer esse jogo')
+leo = Pessoa('Léo', 'BOSCH', 'Alto', 'Magro', 'Moreno', 'Ensina JAVA melhor que outras pessoas')
 
-def jogo():
-    vinicius = Pessoa('Masculino', '18', 'Loiro')
-    joaoPedro = Pessoa('Masculino', '16', 'Preto')
-    raphael = Pessoa('Masculino', '19', 'Preto')
+lista = [timoteo, lindomar, celso, luca, clebinho, leo]
 
-    pessoas = [vinicius, joaoPedro, raphael]
-
-    n = random.randint(0,2)
-    dica_genero = pessoas[n].genero
-    dica_idade = pessoas[n].idade
-    dica_cor = pessoas[n].corCabelo
-
-
-
-jogo()
+x = choice(lista)
+x.jogo()
